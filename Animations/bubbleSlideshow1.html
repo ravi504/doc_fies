@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#bubble_box{width:600px;height:250px;margin:20px auto;border:1px solid grey;}
+#bubbles{width:auto;margin:0px auto;text-align:center;}
+#bubbles > div{display:inline-block;width:15px;height:15px;background:lightgrey;border:1px solid blue;
+			   border-radius:100%;text-decoration:none;cursor:pointer;margin:20px 10px 0px 10px;
+               text-align:center;font:14px;transition:background 0.2s linear 0s; 			   
+}
+#bubble_content{font-family:Arial;margin 0px auto;transition:opacity 0.2s linear 0s;}
+#bubble_content > h3{text-align:center;color:grey;}
+#bubble_content > p {font-size:13px;line-height:2em;text-align:center;padding:20px 50px;}
+</style>
+<script>
+function _(id){return document.getElementById(id);}
+
+var ba, bi = 0, intrvl, bca;
+
+bca = [
+     "<h3>Bubble 1</h3><p>This is Bubble 1 Content </p>",
+     "<h3>Bubble 2</h3><p>This is Bubble 2 Content </p>",
+     "<h3>Bubble 3</h3><p>This is Bubble 3 Content </p>",
+     "<h3>Bubble 4</h3><p>This is Bubble 4 Content </p>"
+];
+function bubbles(bi){
+ _("bubble_content").style.opacity = 0;
+ 
+ for(var i=0; i < ba.length; i++){
+  ba[i].style.background = "lightgrey";
+ }
+  ba[bi].style.background = "grey";
+  
+  setTimeout(function(){
+   _("bubble_content").innerHTML = bca[bi];
+   _("bubble_content").style.opacity = 1;
+  },300);
+}
+ 
+
+function bubbleLoop(){
+ bi++;
+  if(bi == ba.length){
+   bi = 0;
+  }
+  bubbles(bi);
+}
+
+window.addEventListener("load",function(){
+ ba = _("bubbles").children;
+ 
+ intrvl = setInterval(bubbleLoop,3000);
+});
+
+
+</script>
+<body>
+<div id="bubble_box">
+ <div id="bubbles">
+  <div onclick="bubbles(0); clearInterval(intrvl);" style="background:grey";></div>
+  <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+  <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+  <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+ </div>
+ <div id="bubble_content">
+  <h3>Bubble 1</h3>
+  <p>This is Bubble 1 Content</p>
+ </div>
+</div>
+</body>  
+</html>

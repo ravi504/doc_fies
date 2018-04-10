@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+#d_iv{
+ border:1px solid grey;
+ background:lightgrey;
+ width:300px;
+ height:200px;
+ margin-top:5px;
+}
+</style>
+<script>
+function fade_out(el){
+ var id = document.getElementById(el);
+ id.style.transition = "opacity 1.0s linear 0s";
+ id.style.opacity = 0;
+}
+function fade_in(el){
+ var id = document.getElementById(el);
+ id.style.transition = "opacity 1.0s linear 0s";
+ id.style.opacity = 1;
+}
+</script>
+<body>
+<button onclick="fade_out('d_iv')">FadeOut</button>
+<button onclick="fade_in('d_iv')">FadeIn</button>
+
+<div id="d_iv">this is a div.</div>
+</body>
+</html>

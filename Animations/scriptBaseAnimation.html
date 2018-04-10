@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#d_iv{
+ position:absolute;
+ top:50px;
+ background-color:lightgrey;
+ width:50px;height:50px;
+ border-radius:100%
+}
+</style>
+</head>
+<body>
+<div id="d_iv"></div>
+<button onmousedown="Btn_direction('left'); ballanimation()" onmouseup="stopballanimation()">Left</button>
+<button onmousedown="Btn_direction('right'); ballanimation()" onmouseup="stopballanimation()">Right</button>
+<script>
+var id = document.getElementById("d_iv");
+var b_direction;
+var animat_id;
+
+function Btn_direction(val){
+ b_direction = val;
+}
+
+function ballanimation(){
+ if(b_direction == "right"){
+  id.style.left = (id.offsetLeft +=2) + "px";
+ }else if(b_direction == "left"){
+  id.style.left = (id.offsetLeft -=2) + "px";  
+ }
+ animat_id = window.requestAnimationFrame(ballanimation);
+}
+function stopballanimation(){
+ window.cancelAnimationFrame(animat_id);
+}
+
+</script>
+</body>
+</html>

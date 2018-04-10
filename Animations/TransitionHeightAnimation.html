@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<style>
+#d_iv{
+ 
+ background:lightgrey;
+ width:300px;
+ height:400px;
+ overflow:hidden;
+ 
+}
+</style>
+<script>
+function slide_in(el){
+ var id = document.getElementById(el);
+ id.style.transition = "height 0.2s linear 0s";
+ id.style.height = "400px";
+}
+function slide_out(el){
+ var id = document.getElementById(el);
+ id.style.transition = "height 0.2s linear 0s";
+ id.style.height = "0px";
+}
+
+</script>
+<body>
+<button onclick="slide_in('d_iv')">SlideIn</button>
+<button onclick="slide_out('d_iv')">SlideOut</button>
+
+<div id="d_iv">this is a div.</div>
+</body>
+</html>

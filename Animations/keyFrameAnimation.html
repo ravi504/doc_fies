@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#d_iv{
+ width:100px;height:100px;background-color:lightgrey;
+}
+</style>
+<script>        
+var keyframes = "@keyframes box-move{ 0%{width:100px;} 100%{width:300px;} }";
+var c = document.createElement("style");
+c.innerHTML = keyframes;
+
+document.getElementsByTagName("head")[0].appendChild(c);
+</script>
+
+</head>
+<body>
+<div id="d_iv">Object 1</div>
+
+
+<script>
+var i = document.getElementById("d_iv");
+i.style.animation = "box-move ease-in-out 1.0s infinite alternate";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<style>
+#d_iv{
+ border:1px solid grey;
+ width:300px;
+ height:200px;
+ margin-top:5px;
+}
+</style>
+<script>
+function change_bg(el,clr){
+ var id = document.getElementById(el);
+ id.style.transition = "background 1.0s linear 0s";
+ id.style.background = clr;
+}
+</script>
+<body>
+<button onclick="change_bg('d_iv','lightpink')">Lightpink</button>
+<button onclick="change_bg('d_iv','lightgrey')">Lightgrey</button>
+<button onclick="change_bg('d_iv','lightgreen')">Lightgreen</button>
+<div id="d_iv">this is a div.</div>
+</body>
+</html>
