@@ -1,0 +1,45 @@
+========================== + Git repo + =====================================================
+git:
+========
+Source -
+	- https://www.digitalocean.com/community/tutorials/how-to-use-git-effectively#-creating-a-commit-message-
+	- https://www.digitalocean.com/community/tutorials/how-to-use-the-gitlab-user-interface-to-manage-projects
+	- https://www.digitalocean.com/community/tutorials/how-to-use-git-branches
+	- https://stackoverflow.com/questions/28429819/rejected-master-master-fetch-first
+	- https://github.com/Parbinder-Rawat/python-universe/tree/master
+--------------------------------------------------------------------
+Installation -
+   # apt-get install git-core
+   # git config --global user.name "parbinder"
+   # git config --global user.email "r.****@gmail.com"
+
+Configuration -
+   # cd MyProject
+
+   # git init		->> git initiation in current directory.
+
+   # git remote add origin https://github.com/***.git	
+			->>> set the central repository server, here put your central 
+			server repo address or github url like i did it.
+			->>> origin is the name, we can set anything we like.
+
+   # git remote -v	->>> shows the remote server lists
+   # vi file1		->>> enter/edit the file.
+   # git add .		->>> add all created/modified file for staging.
+   # git add file1	->>> add inidividual file instead of above.
+
+   # git status		->>> shows file stagging to commit if any.
+   # git commit -m "my 1st commit" -a	->>> commit for all changes with -a
+   # git commit -m "my 1st commit" file1   ->> commit for file1 creation/modification.
+   
+   # git push origin master	->>> push the changes to central server.
+--------------------------------------------------------------
+NOTE:- If you get the below error
+	"! [rejected]        master -> master (fetch first)
+	error: failed to push some refs to 'git@github.com:zapnaa/abcappp.git'" 
+
+This mostly happens for the 1st time push as git directory is not synced with 
+central server repo.
+
+Fix for this error:
+   #git pull origin master
