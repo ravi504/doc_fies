@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+ <script>
+  
+  /*document.write('<h3> Callback function synchronous call </h3>');
+  
+  function show_update(n_ame,p_lace){
+   n_ame();
+   p_lace();
+  }
+  show_update(function(){
+   document.write("Name : " + " jack " + "<br>");
+  },
+  function(){
+   document.write("Place : " + " UK " + "<br>");
+  });
+  void function spp(){
+   document.write("End of code ..");// This block of code is execute last.
+  }();
+  */
+  
+  
+  
+  function show_update1(n_ame,p_lace){
+   setTimeout(function(){
+    n_ame();
+	p_lace();
+   },2000);
+  }
+  show_update1(function(){
+   document.write("Name : " + " Jill " + "<br>");
+  },
+  function(){
+   document.write("Place : " + " Canada " + "<br>");
+  });
+  void function sd(){
+  document.write("this is a end of code..");//This block of code is execute first then callback function call.
+  }();
+ </script>
+</head> 
+<body>
+ 
+</body>
+</html>

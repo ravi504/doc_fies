@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+ <script>
+  document.write("<h3>1.<u> Array.Prototype.find()</u> </h3>");
+  var num = [3,2,5];
+  var num_is = num.find(function(x){return x % 2 == 1;});
+  document.write(num_is);
+//return the value of an array of found first match;
+//************************************************************************
+  document.write("<h3>2.<u> Array.Prototype.findIndex()</u> </h3>");	
+  var num = [4,2,3];
+  var num_is = num.findIndex((x) => x % 2 == 1);
+  document.write(num_is);
+//return the index number of founded value;
+//************************************************************************
+  document.write("<h3>3.<u> Array.Prototype.entries()</u> </h3>");
+   var numbers = [1, 2, 3]; 
+	var val= numbers.entries(); 
+//console.log([...val]);
+	document.write([...val]);
+//return the index number with array value.[0,1][1,2][2,3]
+//************************************************************************
+   document.write("<h3>4.<u> Array.Prototype.from()</u> </h3>");	
+	for(var i of Array.from("hello")){
+	 document.write(i + "<br>");
+	}
+//creat a new array from array like object 	
+//************************************************************************
+	document.write("<h3>5.<u> Array.Prototype.key()</u> </h3>");
+	var na = Array.from([2,5,6].keys());
+	document.write(na);
+//returns the array index;
+//************************************************************************
+ 
+  document.write("<h3>6. Passing array to function();</h3>");
+  var names = ["jack","kill","pam","raj"];
+   function stu_nam(name){
+    for(var i=0; i < name.length; i++){
+	 document.write(name[i] + "<br>");
+	}
+   }
+   stu_nam(names);
+
+//************************************************************************   
+ 
+ document.write("<h3>7. function() return an array;</h3>");
+  
+ (function(){
+  function stu_nam(){
+   return new Array("jack","jill","pam","wip");
+  }
+  var name_s = stu_nam();
+   for(var nam in name_s){
+    document.write(name_s[nam] + "<br>");
+   }
+ })();
+ // here we use self invoked function due the same function name of above.
+ 
+ </script>
+</head> 
+<body>
+ 
+</body>
+</html>

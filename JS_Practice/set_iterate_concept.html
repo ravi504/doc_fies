@@ -1,0 +1,52 @@
+<html> 
+   <head> 
+      <script>
+ 		document.write("<h3>1.Iterator set.entries()</h3>");
+		var set = new Set(['a','b']);
+		var iterator = set.entries();
+		console.log(iterator.next());
+		//print value:[a,a], done: false;
+        //*********************************************************
+		
+		document.write("<h3>2.Iterator set.values()</h3>");
+		var set  = new Set(['a','b','c']);
+		var iterator = set.values();
+		console.log(iterator.next());
+		//print value: [a], done:false;
+		//**********************************************************
+		
+		document.write("<h3>3.Iterator set.keys()</h3>");
+		var set = new Set(['a','b','c']);
+		var iterator = set.keys();
+		console.log(iterator.next());
+		//prit value:[a], done:false;
+		//********************************************************
+		
+		document.write("<h3>4.Iterator Map.entries()</h3>");
+		var map = new Map([[1,'jack'],[2,'pam'],[3,'kim']]);
+		var iterator = map.entries();
+		console.log(iterator.next());
+		//print value:[1,jack], done:false;
+		//********************************************************
+		
+		document.write("<h3>5.Iterator Map.values()</h3>");
+		var map = new Map([[1,'jack'],[2,'pam']]);
+		var iterator = map.values();
+		console.log(iterator.next());
+		//print value:[jack], done:false;
+		//*********************************************************
+		
+		document.write("<h3>6.Iterator Map.keys()</h3>");
+		var map = new Map([[1,'jack'],[2,'pam']]);
+		var iterator = map.keys();
+		console.log(iterator.next());
+		//print value:[1], done:false;
+	  </script>
+   </head> 
+
+   <body> 
+      
+	  </table> 
+   </body>
+   
+</html>
