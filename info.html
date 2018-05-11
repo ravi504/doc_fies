@@ -1,0 +1,65 @@
+
+********************git command for setting proxy  ***************************************
+
+
+touch info.html
+
+git config --global http.proxy noiapweb.aptaracorp.com:8080
+
+git config --global http.sslVerify false
+
+git config http.proxy
+
+unset http_proxy
+
+git config --global unset http.proxy
+
+git config --global --unset http.proxy
+
+git config --global http.sslVerify false
+git config --global https.sslVerify false
+git config --global http.proxy http://user:pass@yourproxy:port
+git config --global https.proxy http://user:pass@yourproxy:port
+
+
+********************git command for push and pull files ***************************************
+$ git config --global user.name "username"
+
+$ git config --global user.email "useremail"
+
+$ git remote add origin "git path name.git"
+
+$ git remote show origin or git remote rm origin    // to show or delete origin list
+
+$ git config init 
+
+$ git add {file name or folder name}
+
+$ git status                                  // to check the current status.
+
+$ git commit -m "{type the message for update}" {file name}
+
+$ git push or pull origin master
+
+
+*******************git command for pull files**************************************************
+
+$ git clone {full path of git folder}
+
+$ git pull origin master.
+
+*******************git command for delete files**************************************************
+
+$ git rm file name or folder name.
+
+$ git rm. -r                      // Remove all files command
+
+$git commit -m "Delete files and folder some commit"
+
+$git push origin master
+
+*********************** to commit un commit file for all *********************
+
+1- git stash
+2- git add .
+3- git commit -m "your commit message"
