@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="../js/template_concept.js"></script>
+ 
+</head> 
+<body ng-app="main_module">
+ <div ng-controller="main_controller">
+  
+  <h3>Template 1</h3>
+   
+   <div temp-one>
+     this content will replace
+	 <div>
+    this content will also replace
+   </div>
+   </div>
+  <h3>Template 2</h3>
+   
+   <div temp-two>
+    this content will changed.
+	<div>
+    this content is also changed.
+   </div>
+  </div>
+ </div>
+  
+ 
+</body>
+</html>

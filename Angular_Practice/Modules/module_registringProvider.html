@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="../js/module_registringProvider.js"></script>
+ 
+</head> 
+<body ng-app="module_App">
+ <div ng-controller="module_controller">
+  <strong>Firstname:</strong>{{person_personProvider.firstname()}}<br />
+  <strong>Lastname:</strong>{{person_personProvider.lastname()}}<br />
+  <strong>Fullname:</strong>{{person_personProvider.fullname("*")}}<br /><br />
+  
+  <label>Enter the firstname: <input type="text" ng-model="personInstance.firstname"></label><br /><br />
+  <label>Enter the lastname: <input type="text" ng-model="personInstance.lastname"></label><br />
+ </div>
+  
+ 
+</body>
+</html>
